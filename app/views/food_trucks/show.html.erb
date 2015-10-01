@@ -1,0 +1,61 @@
+<h1> <%=@food_truck.name %> </h1>
+<ul>
+  <h3>
+    Average Food Truck Rating: <%=@food_truck.avg_rating%>
+  </h3>
+  <p>
+  Primary Location: <%=@food_truck.location%>
+  </p>
+
+  <p><h5>
+    <%=@food_truck.description%>
+  </p></h5>
+</ul>
+
+<% if current_user %>
+  <% if current_user.admin %>
+    <%= link_to "Delete food truck", @food_truck, method: :delete,
+     data: {confirm: "Are you sure?"} %>
+  <% end %>
+<% end %>
+
+<h2>Reviews</h2>
+
+
+<%- if current_user -%>
+  <div class="new-review">
+    <button data-remote="true" class="button radius button-new-form">
+    Submit Your Review</button>
+    <div class="hide reviewform">
+     <%= form_for [@food_truck, @review] do |f| %>
+      <%= f.label :header %>
+      <%= f.text_field :header %>
+      <br>
+      <%= f.label :body %>
+      <%= f.text_field :body %>
+      <br>
+      <%= f.label :rating %>
+      <%= f.number_field :rating %>
+      <br>
+
+      <%= f.submit "Submit Review" %>
+     <% end %>
+    </div>
+
+  <%- else -%>
+    <%= link_to 'Submit Your Review', new_user_session_path,
+    class: "button radius" %>
+  </div>
+<%- end -%>
+
+
+<div id="reviews">
+  <%= render @reviews %>
+</div>
+
+<div id ="paginator">
+  <%= paginate @reviews %>
+</div>
+
+<%= link_to "Back", food_trucks_path,
+class: "button success" %>

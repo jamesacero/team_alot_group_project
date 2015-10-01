@@ -10,6 +10,10 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+# Use for jquery validation
+gem 'jquery-validation-rails'
+# Use for pagination
+gem 'kaminari'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -49,13 +53,23 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'mailcatcher'
+
 end
+# Used for testing JS
+gem 'selenium-webdriver', '~> 2.47.1', group: [:development, :test]
+
+gem 'rails_12factor', group: :production
+
+gem 'carrierwave'
+gem 'fog'
 
 
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
 gem 'launchy', group: [:development, :test]
 gem 'factory_girl', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
 gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'

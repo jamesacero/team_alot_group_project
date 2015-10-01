@@ -88,17 +88,19 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
 
 // We use these to define default font weights
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
+$white       : #ffffff;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
+$vapor       : #f6f6f6;
 // $white-smoke : #F5F5F5;
 // $silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
@@ -123,10 +125,16 @@ $include-html-global-classes: $include-html-classes;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
+$primary-color: #edb97d;
+$secondary-color: #769481;
+
+
 // We use these to control various global styles
-// $body-bg: $white;
+// $body-bg: #008CBA;
+$body-bg: #f5e5c4;
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
+$body-font-family: Copperplate, Copperplate Gothic Light, fantasy;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -394,6 +402,7 @@ $include-html-global-classes: $include-html-classes;
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
 // $block-grid-default-spacing: rem-calc(20);
+$block-grid-default-spacing: rem-calc(25);
 
 // $align-block-grid-to-grid: false;
 // @if $align-block-grid-to-grid {$block-grid-default-spacing: $column-gutter;}
@@ -687,7 +696,6 @@ $include-html-global-classes: $include-html-classes;
 // $input-error-message-padding: rem-calc(6 9 9);
 // $input-error-message-top: -1px;
 // $input-error-message-font-size: rem-calc(12);
-// $input-error-message-font-weight: $font-weight-normal;
 // $input-error-message-font-style: italic;
 // $input-error-message-font-color: $white;
 // $input-error-message-bg-color: $alert-color;
@@ -987,12 +995,13 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control the background and border styles
 // $panel-bg: scale-color($white, $lightness: -5%);
+$panel-bg: $vapor;
 // $panel-border-style: solid;
-// $panel-border-size: 1px;
+$panel-border-size: 3px;
 // $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
 
 // We use this % to control how much we darken things on hover
-// $panel-border-color: scale-color($panel-bg, $lightness: -11%);
+$panel-border-color: #aec2b7;
 
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
@@ -1401,15 +1410,18 @@ $include-html-global-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: $oil;
+$topbar-bg-color: #769481;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
+$topbar-height: rem-calc(60);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
 // $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(30);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: $white;
@@ -1418,9 +1430,10 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $jet;
+$topbar-link-bg-hover: #40593a;
 // $topbar-link-bg-color-hover: $charcoal;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
